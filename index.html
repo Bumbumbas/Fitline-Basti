@@ -5,40 +5,83 @@
     <meta charset="UTF-8">
     <title>Sparstrumpf.store</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .section-box {
+            text-align: center;
+            width: 300px;
+        }
+        .section-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h1>Willkommen bei Sparstrumpf.store</h1>
-
     <nav>
-        <ul>
-            <li><a href="fitline.html">FitLine</a></li>
-            <li><a href="technik.html">Technik</a></li>
-            <li><a href="reisen.html">Reisen</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+        <a href="index.html">Startseite</a>
+        <a href="fitline.html">FitLine</a>
+        <a href="technik.html">Technik</a>
+        <a href="reisen.html">Reisen</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <section>
-        <h2>FitLine</h2>
-        <a href="fitline.html">
-            <img src="img/fitline1.jpg" alt="FitLine Produkt" style="max-width:300px;">
-        </a>
-    </section>
+    <h1 style="text-align:center; padding-top:20px;">Willkommen bei Sparstrumpf.store</h1>
 
-    <section>
-        <h2>Technik</h2>
-        <a href="technik.html">
-            <img src="img/technik4.jpg" alt="Technik" style="max-width:300px;">
-        </a>
-    </section>
-
-    <section>
-        <h2>Reisen</h2>
-        <a href="reisen.html">
-            <img src="img/reisen3.jpg" alt="Reisen" style="max-width:300px;">
-        </a>
-    </section>
+    <div class="container">
+        <div class="section-box">
+            <a href="fitline.html">
+                <img src="img/fitline1.jpg" alt="FitLine">
+                <p><strong>FitLine Produkte</strong></p>
+            </a>
+            <p><a href="https://20660678.pm-quickstart.com" target="_blank">➜ Jetzt FitLine entdecken</a></p>
+        </div>
+        <div class="section-box">
+            <a href="technik.html">
+                <img src="img/technik4.jpg" alt="Technik">
+                <p><strong>Technik-Angebote</strong></p>
+            </a>
+            <p><a href="https://amzn.to/3HAx9AP" target="_blank">➜ Technik bei Amazon</a></p>
+        </div>
+        <div class="section-box">
+            <a href="reisen.html">
+                <img src="img/reisen3.jpg" alt="Reisen">
+                <p><strong>Traumreisen buchen</strong></p>
+            </a>
+            <p><a href="https://www.check24.net" target="_blank">➜ Jetzt bei Check24 buchen</a></p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Sparstrumpf.store – Sebastian Nagel</p>
