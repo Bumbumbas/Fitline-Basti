@@ -1,1 +1,39 @@
-<!DOCTYPE html><html lang='de'><head><meta charset='UTF-8'><title>Kontakt</title><link rel='stylesheet' href='style.css'></head><body><header><h1>Kontakt</h1></header><nav><ul><li><a href='index.html'>Startseite</a></li><li><a href='fitline.html'>FitLine</a></li><li><a href='technik.html'>Technik</a></li><li><a href='reisen.html'>Reisen</a></li><li><a href='blog.html'>Blog</a></li><li><a href='kontakt.html' class='active'>Kontakt</a></li></ul></nav><main><p>Kontaktformular kommt bald.</p></main><footer><p>&copy; 2025 Sparstrumpf.store</p></footer></body></html>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt – Sparstrumpf.store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; }
+        form { max-width: 500px; margin: 20px auto; display: flex; flex-direction: column; gap: 10px; }
+        input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px; background-color: #222; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="fitline.html">FitLine</a>
+        <a href="technik.html">Technik</a>
+        <a href="reisen.html">Reisen</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <h1>Kontaktiere uns</h1>
+    <p>Schreibe uns gerne über das folgende Formular:</p>
+
+    <form action="mailto:sebastian.nagel@yahoo.de" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="email" name="email" placeholder="Deine E-Mail" required>
+        <textarea name="nachricht" rows="5" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Nachricht senden</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Sparstrumpf.store</p>
+    </footer>
+</body>
+</html>
