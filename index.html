@@ -2,89 +2,83 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Sparstrumpf.store</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #222;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-        .section-box {
-            text-align: center;
-            width: 300px;
-        }
-        .section-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.2);
-        }
-        footer {
-            text-align: center;
-            margin: 30px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Blog – sparstrumpf.store</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f2f2f2; padding: 40px; }
+    h1 { color: #2e7d32; text-align: center; margin-bottom: 40px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .tile {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .tile h2 { color: #2e7d32; margin: 10px 0; }
+    .tile p { color: #555; font-size: 0.95em; }
+    .tile a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .backlink {
+      display: block;
+      text-align: center;
+      margin-top: 50px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Startseite</a>
-        <a href="fitline.html">FitLine</a>
-        <a href="technik.html">Technik</a>
-        <a href="reisen.html">Reisen</a>
-        <a href="blog.html">Blog</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
 
-    <h1 style="text-align:center; padding-top:20px;">Willkommen bei Sparstrumpf.store</h1>
+<h1>📰 Unser Blog – Neues von sparstrumpf.store</h1>
+<div class="grid" id="blog-container">
+  <!-- Blogartikel werden hier per JavaScript eingefügt -->
+</div>
 
-    <div class="container">
-        <div class="section-box">
-            <a href="fitline.html">
-                <img src="img/fitline1.jpg" alt="FitLine">
-                <p><strong>FitLine Produkte</strong></p>
-            </a>
-            <p><a href="https://20660678.pm-quickstart.com" target="_blank">➜ Jetzt FitLine entdecken</a></p>
-        </div>
-        <div class="section-box">
-            <a href="technik.html">
-                <img src="img/technik4.jpg" alt="Technik">
-                <p><strong>Technik-Angebote</strong></p>
-            </a>
-            <p><a href="https://amzn.to/3HAx9AP" target="_blank">➜ Technik bei Amazon</a></p>
-        </div>
-        <div class="section-box">
-            <a href="reisen.html">
-                <img src="img/reisen3.jpg" alt="Reisen">
-                <p><strong>Traumreisen buchen</strong></p>
-            </a>
-            <p><a href="https://www.check24.net" target="_blank">➜ Jetzt bei Check24 buchen</a></p>
-        </div>
-    </div>
+<a href="../index.html" class="backlink">🔙 Zur Startseite</a>
 
-    <footer>
-        <p>&copy; 2025 Sparstrumpf.store – Sebastian Nagel</p>
-    </footer>
+<script>
+// Liste deiner Blogartikel
+const blogArticles = [
+  {
+    file: "blog_amazon.html",
+    title: "Amazon-Schnäppchen clever nutzen",
+    teaser: "Die besten Deals & Tipps, wie du mit Amazon täglich sparst.",
+    image: "https://via.placeholder.com/300x160?text=Amazon+Schn%C3%A4ppchen"
+  },
+  {
+    file: "blog_sparstrumpf.html",
+    title: "sparstrumpf.store: Was du alles bei uns findest",
+    teaser: "Ein Überblick über alle Shops, Produkte und zukünftige Highlights.",
+    image: "https://via.placeholder.com/300x160?text=Gesundheit+%26+Spartipps"
+  }
+];
+
+const container = document.getElementById("blog-container");
+blogArticles.forEach(article => {
+  const div = document.createElement("div");
+  div.className = "tile";
+  div.innerHTML = `
+    <img src="${article.image}" alt="${article.title}">
+    <h2>${article.title}</h2>
+    <p>${article.teaser}</p>
+    <a href="${article.file}">Mehr erfahren</a>
+  `;
+  container.appendChild(div);
+});
+</script>
+
 </body>
 </html>
